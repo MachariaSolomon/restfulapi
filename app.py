@@ -23,10 +23,13 @@ parser.add_argument('entry')
 #Shows a single entry and allows you to delete an entry
 class Entry(Resource):
     def get(self, entry_id):
-        pass
+        abort_if_entry_doesnt_exist(entry_id)
+        return ENTRIES[entry_id]
 
     def delete(self, entry_id):
-        pass
+        abort_if_entry_doesnt_exist(entry_id)
+        del ENTRIES[entry_id]
+        return ' ', 204
 
     def put(self, entry_id):
         pass
@@ -41,8 +44,8 @@ class EntryList(Resource):
         pass
 
 #Setup the Api routing, the version included
-api.add_resource(EntryList, '/entry/api/v1/ENTRIES' )
-api.add_resource(Entry, '/ENTRIES/api/v1/<entry_id>')
+#api.add_resource(EntryList, '/entries/api/v1/entries' )
+api.add_resource(Entry, '/entry/api/v1/entries/<entry_id>')
 
 if __name__ == '__main__':
     app.run(debug=True)
