@@ -8,7 +8,7 @@ api = Api(app)
 ENTRIES = {
     'entry1': {'entry': 'studied python'},
     'entry2': {'entry': 'visited the zoo'},
-    'entry': {'entry': 'went to the gym'}
+    'entry3': {'entry': 'went to the gym'}
 }
 
 def abort_if_entry_doesnt_exist(entry_id):
