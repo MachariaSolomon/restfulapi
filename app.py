@@ -32,7 +32,10 @@ class Entry(Resource):
         return ' ', 204
 
     def put(self, entry_id):
-        pass
+        args = parser.parse_args()
+        entry = {'entry': args['entry']}
+        ENTRIES[entry_id] = entry
+        return entry, 201
 
 #EntryList
 #Shows a list of all ENTRIES and lets you POST to add a new entry
