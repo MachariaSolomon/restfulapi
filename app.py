@@ -41,13 +41,13 @@ class Entry(Resource):
 #Shows a list of all ENTRIES and lets you POST to add a new entry
 class EntryList(Resource):
     def get(self):
-        pass
+        return ENTRIES
 
     def post(self):
         pass
 
 #Setup the Api routing, the version included
-#api.add_resource(EntryList, '/entries/api/v1/entries' )
+api.add_resource(EntryList, '/entry/api/v1/entries' )
 api.add_resource(Entry, '/entry/api/v1/entries/<entry_id>')
 
 if __name__ == '__main__':
