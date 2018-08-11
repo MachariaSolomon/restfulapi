@@ -8,7 +8,8 @@ api = Api(app)
 ENTRIES = {
     'entry1': {'entry': 'studied python'},
     'entry2': {'entry': 'visited the zoo'},
-    'entry3': {'entry': 'went to the gym'}
+    'entry3': {'entry': 'went to the gym'},
+    'entry4': {'entry': 'went to the gym'}  
 }
 
 def abort_if_entry_doesnt_exist(entry_id):
@@ -44,11 +45,15 @@ class EntryList(Resource):
         return ENTRIES
 
     def post(self):
-        pass
+        args = parser.parse_args()
+        entry_id = int(max(ENTRIES.keys()).lstrip('entry')) + 1
+        entry_id = 'entry%i' % entry_id
+        ENTRIES[entry_id] = {'entry': args['entry']}
+        return ENTRIES[entry_id], 201
 
 #Setup the Api routing, the version included
-api.add_resource(EntryList, '/entry/api/v1/entries' )
-api.add_resource(Entry, '/entry/api/v1/entries/<entry_id>')
+api.add_resource(EntryList, '/api/v1/entries' )
+api.add_resource(Entry, '/api/v1/entries/<entry_id>')
 
 if __name__ == '__main__':
     app.run(debug=True)
