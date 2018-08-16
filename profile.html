@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+ <html class="signin-bg">
+    <head>
+        <title>Profile</title>
+        <meta charset="UTF-8">
+        <!-- Load icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="topnav">
+            <a class="active" href="index.html">Home</a>
+            <a href="entries.html">Entries</a>
+            <a href="profile.html">Profile</a>
+            <div class="topnav-right">
+                <a href="signin.html">Logout</a>
+            </div>
+        </div>
+        <div class="counter">
+            <h2 style="color: white;">Your Profile</h2>
+            <p style="color: white;"><b>Total entries: 68</b></p>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="settings">
+                <h2 style="color: dodgerblue; text-align:center;">Settings</h2>
+                <hr>
+                <form class="set_profile" action="" method="">
+                <input type="text" name="" placeholder="Solomon" required><br>
+                <input type="text" name="" placeholder="Solomon@example.com" required>
+                <p><a href="edit_profile.html">Edit Profile</a></p>
+                <p><a href="changepassword.html">Change Password?</a></p>
+                </form>
+                </div>
+            <div class="reminder">
+                <h2 style="color:red; text-align:center;">Reminders</h2>
+                <hr>
+                <p> Set Date and Time:</p>
+                <table id="datetime">
+                    <td></td><input type="datetime-local" value="2018-01-01T00:00">
+                    <td><button>Set</button></td>
+                </table>
+            </div>
+        </div>
+        <script>
+            $("button").click(function() {
+                var value=
+                $(this).parent().find("input").val();
+                $("#output").html(value + "<br>$lt;time datetime='"+ value + "'>$lt;/time>");
+                console.log(value);
+            });
+        </script>
+        
+    </body>
+</html> 

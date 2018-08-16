@@ -1,0 +1,331 @@
+
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+/*sets base style for each page */
+html {
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+/* set background image per page */
+.home-bg {
+background: url(signin.jpg) no-repeat center center fixed;
+width: 100%;
+height: auto;
+}
+
+.-bg {
+background: url(images/about.bg.jpg) no-repeat center center fixed;
+}
+
+.-bg {
+    background: url(images/contact-bg.jpg) no-repeat center center fixed;
+}
+
+.signin-bg {
+    background: url(login.jpg) no-repeat center center fixed;
+}
+
+.signup-bg {
+    background: url(login.jpg) no-repeat center center fixed;
+}
+
+/*style the header*/
+.header {
+    text-align: center;
+    color: white;
+    margin-top: 5px;
+    font-family: 'Tangerine', serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/*style the signin and signup forms*/
+.box {
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    text-align: center;
+}
+
+.box h3 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.box input[type="text"], .box input[type="password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box input[type="text"]:focus, .box input[type="password"]:focus {
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+.box input[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.box input[type="submit"]:hover {
+    background: #2ecc71;
+}
+/* style all the hr*/
+hr {
+    background-color: #3498db;
+}
+/* style all links*/
+a {
+    color:#2ecc71;
+    font-weight: bold;
+}
+
+/* style the navigation menu */
+.topnav {
+    display: flex;
+    background-color: transparent;
+    overflow:hidden;
+}
+
+.topnav a {
+    color: #0e7037;
+    text-align: center;
+    margin: 2px;
+    padding: 14px 16px;
+    background: transparent;
+    text-decoration: none;
+    font-size: 17px;
+    display: inline-block;
+    border: 1px solid #054d7e;
+    border-radius: 6px;
+}
+
+.topnav a:hover {
+    background-color:#077233;
+    color: white;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.topnav-right {
+    margin-left: auto;
+    padding-right: 5px;
+}
+
+.topnav-right a{
+    background: slategray;
+}
+
+
+div.justified {
+    display: flex;
+    justify-content: center;
+}
+
+/* style the textarea */
+textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 40px;
+    width: 200px;
+    outline: none;
+    border-radius: 20px;
+    transition: 0.25s;
+}
+
+.textarea input[type="submit"] {
+    border: 2px;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    width: 200px;
+    outline: none;
+    border-radius: 20px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+textarea:focus {
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+.textarea input[type="submit"]:hover {
+    background: #2ecc71;
+}
+
+/* add style to the entires table, entry page */
+#myEntry {
+   
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 40px;
+    width: 200px;
+    outline: none;
+    border-radius: 20px;
+    transition: 0.25s;
+  }
+
+#myEntry:focus {
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+/* style the entries table */
+#myTable {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 18px;
+    color: whitesmoke;
+    border: 2px solid #3498db;
+    border-radius: 12px;
+}
+  
+#myTable th, #myTable td {
+    text-align: left;
+    padding: 12px;
+}
+  
+#myTable tr {
+    border-bottom: 1px solid #ddd;
+}
+  
+#myTable tr.header, #myTable tr:hover {
+    background-color: #f1f1f1;
+    color: rgb(37, 36, 36);
+}
+
+/* style the counter on the profile page */
+.counter {
+   text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 2px;
+}
+/* style the settings section on the profile page */
+.settings {
+    background: transparent;
+    flex: 1;
+}
+
+/* style the reminders section in the profile page */
+.reminder {
+    background: transparent;
+    flex: 1;
+    color: red;
+    font-family: sans-serif;
+}
+
+#datetime {
+    display: flex;
+    text-align: center;
+}
+
+input[type="datetime-local"] {
+    border: 0;
+    background: white;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    outline: none;
+    color: black;
+    border-radius: 12px;
+    transition: 0.25s;
+}
+
+button {
+    border: 0;
+    background: white;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: black;
+    border-radius: 12px;
+    cursor: pointer;
+}
+button:hover {
+    background: #2ecc71;
+}
+
+.set_profile {
+    padding: 40px;
+    text-align: center;
+}
+
+.set_profile input[type="text"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
